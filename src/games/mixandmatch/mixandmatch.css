@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Sancreek&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.mixandmatch{
+    background: radial-gradient(rgb(221, 221, 221),rgb(17, 97, 189));
+    min-height: 100vh;
+    font-family: 'Creepster', cursive;
+}
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+    margin: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.game-title{
+    font-family: 'Creepster', cursive;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    text-align: center;
+    font-size: 4em;
+}
+.gameCard{
+    width: 75px;
+    height: 95px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.gameCard.flipped .inner {
+    transform: rotateY(180deg);
+  }
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+    border-radius: 10px;
+  }
+  .gameCard .front,
+  .gameCard .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px;
+  }
+  .gameCard .front {
+    background: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+  }
+  
+  .gameCard .back {
+    background: rgb(0, 0, 0);
+    font-size: 100px;
+    transition: 0.3s ease all;
+  }
+  
+  .gameCard .back:hover {
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #ffffff;
+    font-family: Creepy, serif;
+    font-family: 'Creepster', cursive;
+    cursor: pointer;
+  }
+  .overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+  }
+  .overlay-text-small {
+    font-size: .3em;
+  }
+
+
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 8em;
+    }
+  }

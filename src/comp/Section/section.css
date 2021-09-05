@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+.section-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-container .desc{
+    width: 40vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 50px;
+    flex: 0.5;
+}
+.section-container >img{
+    width: 25%;
+    max-width: 350px;
+    margin: 0px auto;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: 25px 20px 7px 3px rgba(0, 0, 0, 0.137);
+    border: 0px solid rgba(236, 236, 236, 0.452);
+    flex: 0.3;
+}
+.section-container .desc .title{
+    font-size: 3.1rem;
+    color: rgb(243, 235, 235);
+    font-family: 'Acme', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-container .desc .game-desc{
+    font-size: 1rem;
+    color: rgb(238, 231, 231);
+    font-family: 'Acme', sans-serif;
+    letter-spacing: 1px;
+    width: 70%;
+}
+
+.section-container .desc .play-btn{
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.137);
+    color: rgb(196, 196, 196);
+    font-family: 'Acme', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition:  0.2s ease-in-out;
+    margin: 10px 0px;
+}
+.section-container .desc .play-btn:hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
