@@ -2,7 +2,7 @@ import React, {useRef, useState } from 'react';
 import Section from '../../comp/Section/Section';
 import { Data } from '../../comp/data';
 export default function Home() {
-    const [isPlaying, setIsPlaying] = useState(false);
+    // const [isPlaying, setIsPlaying] = useState(false);
     const audioEl = useRef(null);
     return (
         <div className="home">

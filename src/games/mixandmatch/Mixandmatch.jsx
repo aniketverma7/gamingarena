@@ -48,7 +48,7 @@ export default function Mixandmatch() {
     }
     useEffect(() => {
         setPairOfGameData(arrayShuffle(dataArray));
-       },[])
+    },[]);
     useEffect(() => {
         if (active) {
             const res =
@@ -86,7 +86,7 @@ export default function Mixandmatch() {
         if (openedCard.length === 2) {
             setTimeout(() => setOpenedCard([]), 1000);
         }
-    }, [openedCard]);
+    }, [openedCard,pairOfGameData]);
     return (
         <div className="mixandmatch">
             <audio ref={flipRef} src="./audio/f.mp3"/>

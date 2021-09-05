@@ -46,11 +46,11 @@
     padding: 10px 50px;
     border: none;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.137);
+    background: rgba(255, 255, 255, 0.137);
     color: rgb(196, 196, 196);
     font-family: 'Acme', sans-serif;
     letter-spacing: 2px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
