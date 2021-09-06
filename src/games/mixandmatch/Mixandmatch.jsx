@@ -19,14 +19,14 @@ export default function Mixandmatch() {
     const [gameOver, setgameOver] = useState(false);
     const [victory, setVictory] = useState(false);
     const [active, setActive] = useState(false);
-    const [timer, setTimer] = useState(100);
+    const [timer, setTimer] = useState(60);
     const [flips, setFlips] = useState(0);
 
 
     const handleRestart = () => {
         setMatched([]);
         setOpenedCard([]);
-        setTimer(100);
+        setTimer(60);
         setFlips(0);
         setActive(true);
         setVictory(false);
@@ -98,13 +98,16 @@ export default function Mixandmatch() {
             <div id="game-over-text" className={`overlay-text ${gameOver?"visible":""}`}>
                 GAME OVER
                 <span className="overlay-text-small" onClick={handleRestart}>Click to Restart</span>
-                <Link to="/">
+                <Link to="/" style={{color:"white", textDecoration:"none"}}>
                 <span className="overlay-text-small">Go Back to Home</span>
                 </Link>
             </div>
             <div id="victory-text" className={`overlay-text ${victory?"visible":""}`}>
                VICTORY
-               <span className="overlay-text-small" onClick={handleRestart}>Click to Restart</span>
+                <span className="overlay-text-small" onClick={handleRestart}>Click to Restart</span>
+                <Link to="/" style={{color:"white", textDecoration:"none"}}>
+                 <span className="overlay-text-small">Go Back to Home</span>
+                </Link>
                  </div>
             <div className="game-container">
                 <GameInfo timer={timer} flips={flips} />

@@ -23,6 +23,7 @@ export default function Home() {
                             dcolor={data.dcolor}
                             limg={data.limg}
                             url={data.url}
+                            key={key}
                         />
                    )
                })

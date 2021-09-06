@@ -7,9 +7,9 @@
     --snake-color: #ffffff;
     --food-color: #000000;
     --floor-color: #e2d408;
-    --element-spacing: 10px;
-    --laptop-cell-size: 30px;
-    --mobile-cell-size: 20px;
+    --element-spacing: 5px;
+    --laptop-cell-size: 25px;
+    --mobile-cell-size: 15px;
   }
   
   *, *:before, *:after{

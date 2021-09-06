@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './board.css';
 
 const boardSize = [15, 15];
-const refreshTime = 175;
+const refreshTime = 250;
 var snake = [[5, 5]];
 var food = [2,2];
 var adder = [0, 1];
@@ -103,7 +103,7 @@ const Board = () => {
     },[start])
 
     return(
-        <React.Fragment>
+        <>
         {/* Section card */}
         {sectionCard && 
             <div id="message">
@@ -139,17 +139,15 @@ const Board = () => {
             }
         </div>
         {/* Controller */}
-        <div id="controller">
-                <div id="ArrowLeft" className="direction-button" onClick={()=>setDirection("ArrowLeft")}></div>
-                <div id="ArrowUp" className="direction-button" onClick={()=>setDirection("ArrowUp")}></div>
-                <div id="ArrowDown" className="direction-button" onClick={()=>setDirection("ArrowDown")}></div>
+            <div id="controller">
+                <div id="ArrowUp" className="direction-button" onClick={() => setDirection("ArrowUp")}></div>
+                <div className="subcontroller">
+                <div id="ArrowLeft" className="direction-button" onClick={() => setDirection("ArrowLeft")}></div>
                 <div id="ArrowRight" className="direction-button" onClick={()=>setDirection("ArrowRight")}></div>
+                </div>
+                <div id="ArrowDown" className="direction-button" onClick={()=>setDirection("ArrowDown")}></div>
         </div>
-        {/* Info */}
-        <div id="info">
-            Controll movement by keyboard or virtual arrrows.
-        </div>
-        </React.Fragment>
+        </>
     );
 }
 
