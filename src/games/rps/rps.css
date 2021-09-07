@@ -299,7 +299,7 @@
         width: 100px;
         height: 100px;
     }
-    .rps .triangle {
+    .rpssection1 .triangle {
         margin-top: 120px;
         z-index: -10;
         width: 200px;
@@ -335,7 +335,7 @@
         font-size: 0.9rem;
         margin-top: 8px;
     }
-    .container .rule-btn{
+    .rpscontainer .rule-btn{
         bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
@@ -345,6 +345,6 @@
         width: 80vw;
     }
     .rule_container >img{
-        width: 300px;
+        width: 100%;
     }
 }
