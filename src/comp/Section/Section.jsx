@@ -7,8 +7,12 @@ const Section = ({limg,title,gameDesc,rimg,lcolor,dcolor,url,id}) => {
     }
     return (
         <div className="section-container" id={id} style={radient}>
+
             {
-                limg&& <img src={limg} alt='limg'></img>
+             <img src={limg?limg:rimg} className="responsiveimage" alt='limg'></img>
+            }
+            {
+                limg&& <img className="limg" src={limg} alt='limg'></img>
             }
             <div className="desc">
                 <h2 className="title">{title}</h2>
@@ -18,8 +22,12 @@ const Section = ({limg,title,gameDesc,rimg,lcolor,dcolor,url,id}) => {
                 </Link>
             </div>
             {
-                rimg&& <img src={rimg} alt='rimg'></img>
+                rimg&& <img src={rimg} className="rimg" alt='rimg'></img>
             }
+            {/* <div className="break"></div>
+             <div className="arrow bounce">
+                        <a className="fa fa-arrow-down fa-2x" href="#"></a>
+             </div> */}
         </div>
     )
 }

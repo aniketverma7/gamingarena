@@ -30,6 +30,7 @@ export default function Home() {
                             limg={data.limg}
                             url={data.url}
                             id={data.id}
+                            key={key}
                         />
                    )
                })
@@ -37,7 +38,7 @@ export default function Home() {
         </div>
         <div className="footer">
             <h2>Created by Amit Kumar & Aniket Verma.</h2>
-            <a target="_blank" href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a> 
+            <a target="_blank" rel="noreferrer"  href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a> 
         </div>
         </div>
     )

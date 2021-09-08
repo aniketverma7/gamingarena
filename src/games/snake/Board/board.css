@@ -19,7 +19,6 @@
     width: var(--laptop-cell-size);
     height: var(--laptop-cell-size);
 }
-
 .snake{
     background-color: var(--snake-color);
     border-radius: 40%;
