@@ -5,9 +5,11 @@ const Mole = ({onWhack,children,id}) => {
 
 
     return (
+        <>
         <button className="Mole" onClick={()=>{onWhack(id)}}>
             {children}
         </button>
+        </>
     )
 }
 

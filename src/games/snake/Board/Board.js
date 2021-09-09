@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import './board.css';
 
@@ -15,6 +15,9 @@ const Board = () => {
     var [board, setBoard] = useState(new Array(boardSize[0]).fill(0).map(row => new Array(15).fill(boardSize[0])));
     var [sectionCard, setSectionCard] = useState(false);
     var [score, setScore] = useState(0);
+    const moveRef = useRef(null);
+    const foodRef = useRef(null);
+    const gameOverRef = useRef(null);
 
     // Function
     // Handling restart request
@@ -45,6 +48,7 @@ const Board = () => {
     
     // Setting adder value by using if-else block
     const setDirection = (direction) => {
+        moveRef.current.play();
         if (direction === 'ArrowUp'){
             adder = [-1, 0];
         }
@@ -79,16 +83,19 @@ const Board = () => {
             if(! (snake[0][0] === -1 || snake[0][1] === -1 || snake[0][0] === boardSize[0] || snake[0][1] === boardSize[1] )){
                 createCell(snake);
                 for(var j = 1; j < len; j++){
-                    if(snake[0][0] === snake[j][0] && snake[0][1] === snake[j][1]){
+                    if (snake[0][0] === snake[j][0] && snake[0][1] === snake[j][1]) {
+                        gameOverRef.current.play();
                         clearInterval(frame);
                         setSectionCard(true);
                     }
                 }
-            }else{
+            } else {
+                gameOverRef.current.play();
                 clearInterval(frame);
                 setSectionCard(true);
             }
-            if(snake[0][0] === food[0] &&  snake[0][1] === food[1]){
+            if (snake[0][0] === food[0] && snake[0][1] === food[1]) {
+                foodRef.current.play();
                 setScore(++count);
                 randomCell(food, snake, ...boardSize);
                 snake = [...snake, [snake[len-1][0]-adder[0],snake[len-1][1]-adder[1]]]
@@ -104,7 +111,10 @@ const Board = () => {
 
     return(
         <>
-        {/* Section card */}
+            {/* Section card */}
+            <audio ref={moveRef} src="./audio/move.mp3" />
+            <audio ref={foodRef} src="./audio/food.mp3"/>
+            <audio ref={gameOverRef} src="./audio/gameover.mp3"/>
         {sectionCard && 
             <div id="message">
                 <div id="card">

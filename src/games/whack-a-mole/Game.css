@@ -38,7 +38,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    color: #7e5631;
+    color: #613f1f;
 }
 
 .section1 > h2{
@@ -93,7 +93,8 @@
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 10px solid rgb(97, 44, 0);
+    border-bottom: 10px solid rgb(48, 22, 2);
+    border-radius: 20%;
     position: relative;
     overflow: hidden;
 }
@@ -124,4 +125,5 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
