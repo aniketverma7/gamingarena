@@ -11,15 +11,18 @@ const Game = () => {
 
     const audioRef = useRef(null);
     const audioRef2 = useRef(null);
+    const audioRef3 = useRef(null);
 
     const endGame = () => {
+        audioRef3.current.pause();
         setPlaying(false)
         setFinished(true)
         audioRef2.current.play();
       }
       const [hole ,setHole] = useState(0);
 
-      const startGame = () => {
+    const startGame = () => {
+        audioRef3.current.play();
         setScore(0)
         setPlaying(true)
         setFinished(false)
@@ -43,7 +46,8 @@ const Game = () => {
     return (
         <div className="molecontainer">
         <audio ref={audioRef} src="./Sounds/hit.mp3"></audio>
-        <audio ref={audioRef2} src="./Sounds/endSound.mp3"></audio>
+            <audio ref={audioRef2} src="./Sounds/endSound.mp3"></audio>
+        <audio ref={audioRef3} src="./audio/moleback.mp3"></audio>
             <div className="section1">
                 {playing && <Timer time={TIME_LIMIT} onend = {()=> endGame()}></Timer>}
                 <h2>Whack-A-Mole</h2>

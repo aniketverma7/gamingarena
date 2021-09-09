@@ -13,8 +13,8 @@ export const Data =[
         title: "Whack-a-Mole",
         url: "whackamole",
         desc: "Whac-A-Mole is a popular arcade game and carnival game, originally known as MoguraTaiji in Japan. Holes in the play area top are filled with small plastic moles, which pop up at random.Points are scored by whacking each mole as it appears. The faster the reaction the higher the score.",
-        lcolor: "#98d182",
-        dcolor: "#6ca356",
+        lcolor: "#4287f5",
+        dcolor: "#1f70f0",
         rimg: "./Images/whm.jpg",
         limg:"",
         id: "s2"
@@ -23,8 +23,8 @@ export const Data =[
         title: "Snake",
         url: "snake",
         desc: "Snake is a video game that originated during the late 1970s in arcades becoming something of a classic.... The player controls a long, thin creature, resembling a snake, which roams around on a bordered plane, picking up food (or some other item), trying to avoid hitting its own tail or the edges of the playing area.",
-        lcolor: "#794fc4",
-        dcolor: "#6a44ad",
+        lcolor: "#20b2aa",
+        dcolor: "#008080",
         rimg: "",
         limg:"./img/snake.jpg",
         id: "s3"

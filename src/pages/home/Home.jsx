@@ -36,9 +36,12 @@ export default function Home() {
             }
         </div>
         <div className="footer">
-            <h2>Created by Amit Kumar & Aniket Verma.</h2>
+              <h2>Created by Amit Kumar & Aniket Verma.</h2>
                 <a target="_blank" rel="noreferrer" href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a>
-                <a target="_blank" rel="noreferrer" href="https://www.istebits.com/">                 <img className="logolink" src='./img/logo.jfif' />ISTEBITS Website</a>
+                <a target="_blank" href="https://www.istebits.com/">
+                <img className="logolink" src='./img/logo.jfif' />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.istebits.com/">ISTEBITS Website</a>
                 
         </div>
         </div>
