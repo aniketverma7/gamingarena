@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div>
             <div className="nav">
-                <a onClick={()=> setIsOpen(false)} href="#">GAMING ARENA</a>
+                <a onClick={()=> setIsOpen(false)} href="#s1">GAMING ARENA</a>
                 <div className={isOpen ? "navLink active" :"navLink"}>
                     <a onClick={()=> setIsOpen(false)} href="#s1">Mix-or-Match</a>
                     <a onClick={()=> setIsOpen(false)} href="#s2">Whack-a-Mole</a>
@@ -18,7 +18,6 @@ export default function Home() {
             </div>
 
             <div className="home">
-            
             {
                 Data.map((data, key) => {
                     return (
@@ -38,7 +37,9 @@ export default function Home() {
         </div>
         <div className="footer">
             <h2>Created by Amit Kumar & Aniket Verma.</h2>
-            <a target="_blank" rel="noreferrer"  href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a> 
+                <a target="_blank" rel="noreferrer" href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a>
+                <a target="_blank" rel="noreferrer" href="https://www.istebits.com/">ISTEBITS Website</a>
+                
         </div>
         </div>
     )

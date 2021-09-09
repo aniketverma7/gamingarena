@@ -69,34 +69,57 @@
   display: none;
 }
 
-/* .break {
-    flex-basis: 100%;
-    height: 0;
-  }
-.arrow {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .bounce {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-  }
-  a { color: white; text-decoration: none; } */
-/*   
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  } */
+body {
+  background:#0b1d2a;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #fafafa;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow 
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; 
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; 
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; 
+}
 
 @media (max-width:750px){
     .section-container{
@@ -139,5 +162,6 @@
     .section-container .desc .play-btn{
         font-size: 0.8rem;
         margin: 10px auto;
+        margin-bottom: 60px;
     }
 }
