@@ -39,7 +39,7 @@ export default function Home() {
               <h2>Created by Amit Kumar & Aniket Verma.</h2>
                 <a target="_blank" rel="noreferrer" href="https://spider.istebits.com/">Spider 2.0 : The Web Crawler</a>
                 <a target="_blank" href="https://www.istebits.com/">
-                <img className="logolink" src='./img/logo.jfif' />
+                <img className="logolink" src='./img/logo.jfif' alt="" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://www.istebits.com/">ISTEBITS Website</a>
                 
